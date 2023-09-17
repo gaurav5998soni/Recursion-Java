@@ -1,5 +1,3 @@
-package com.coding.challange.recursion;
-
 public class SudokuJava {
 
     public static void main(String[] args) {
