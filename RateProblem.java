@@ -33,6 +33,7 @@ public class RateProblem {
                     visited[row+1][col] = false;
                 }
 
+		//left
                 if(!(col-1<0) && !visited[row][col-1] && maze[row][col-1]!=0) {
                     visited[row][col-1] = true;
                     path+="L";
@@ -42,6 +43,7 @@ public class RateProblem {
                     visited[row][col-1] = false;
                 }
 
+		//right
                 if(!(col+1>=maze.length) && !visited[row][col+1] && maze[row][col+1]!=0) {
                     visited[row][col+1] = true;
                     path+="R";
@@ -50,7 +52,8 @@ public class RateProblem {
                     path=path.substring(0, path.length()-1);
                     visited[row][col+1] = false;
                 }
-
+		
+		//up
                 if(!(row-1<0) && !visited[row-1][col] && maze[row-1][col]!=0) {
                     visited[row-1][col] = true;
                     path+="U";
